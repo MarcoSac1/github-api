@@ -34,7 +34,7 @@ export default{
             // In base alla tipologia chiamo searchUtenti o searchRepo
         },
         searchUtenti(query){
-            axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0&archetype=' + pippo)
+            axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0&archetype=' + query)
             .then((response) => {
                 console.log(response.items);
                 this.cards=response.items;
